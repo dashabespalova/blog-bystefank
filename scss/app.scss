@@ -10,32 +10,166 @@
 @include foundation-forms;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
-@include foundation-accordion;
-@include foundation-accordion-menu;
-@include foundation-badge;
-@include foundation-breadcrumbs;
-@include foundation-button-group;
-@include foundation-callout;
-@include foundation-close-button;
-@include foundation-drilldown-menu;
-@include foundation-dropdown;
-@include foundation-dropdown-menu;
-@include foundation-flex-video;
-@include foundation-label;
-@include foundation-media-object;
+// @include foundation-accordion;
+// @include foundation-accordion-menu;
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-button-group;
+// @include foundation-callout;
+// @include foundation-close-button;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown;
+// @include foundation-dropdown-menu;
+// @include foundation-flex-video;
+// @include foundation-label;
+// @include foundation-media-object;
 @include foundation-menu;
-@include foundation-off-canvas;
-@include foundation-orbit;
-@include foundation-pagination;
-@include foundation-progress-bar;
-@include foundation-slider;
-@include foundation-sticky;
-@include foundation-reveal;
-@include foundation-switch;
-@include foundation-table;
-@include foundation-tabs;
-@include foundation-thumbnail;
+// @include foundation-off-canvas;
+// @include foundation-orbit;
+// @include foundation-pagination;
+// @include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-sticky;
+// @include foundation-reveal;
+// @include foundation-switch;
+// @include foundation-table;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
 @include foundation-title-bar;
-@include foundation-tooltip;
+// @include foundation-tooltip;
 @include foundation-top-bar;
 
+
+// @small:~"(min-width:480px)";
+// @medium:~"(min-width:768px)";
+// @large:~"(min-width:960px)";
+
+
+.row + .row {
+	margin-top: 20px;
+}
+.ba-blog {
+	padding-top: 70px;
+	text-transform: uppercase;
+}
+.ba-blog__img-wrap {
+	position: relative;
+}
+.ba-blog__gradient {
+	position: absolute;
+	height: 90%;
+	top: 10%;
+	left: 0;
+	width: 100%;
+	background-image: linear-gradient(rgba(38,38,38,0), rgba(38,38,38,0.9));
+	padding: 80px 20px 20px 20px;
+	@media (min-width:640px) {
+		padding: 120px 20px 20px 20px;
+	}
+	@media (min-width:1024px) {
+		padding: 310px 120px 20px 20px;
+	}
+}
+.ba-blog__link {
+	position: relative;
+}
+.ba-blog__wrap {
+	position: absolute;
+	height: calc(100% + 30px);
+	top: 0;
+	background-color: transparent;
+	padding: 50px 20px 20px 20px;
+	left: 10px;
+	right: 10px;
+	text-transform: uppercase;
+	@media (min-width:640px) {
+		top: 100%;
+		background-color: #FFF;
+		padding: 10px 20px 0 20px;
+	}
+	@media (min-width:1024px) {
+
+		padding: 30px 20px 0 25px;
+		height: calc(100% + 40px);
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		bottom: 50px;
+		left: 20px;
+		background: url(../img/icon.png) 50% no-repeat;
+		background-size: cover;
+		@media (min-width:640px) {
+			bottom: 20px;
+		}
+		@media (min-width:1024px) {
+			width: 54px;
+			height: 54px;
+		}
+	}
+}
+.ba-blog__img {
+	width: 100%;
+}
+.ba-blog__date {
+	font-size: 10px;
+	color: #818181;
+	@media (min-width:1024px) {
+		font-size: 13px;
+	}
+	transition: color .3s ease-in;
+	&:hover {
+		color: $primary-color;
+	}
+}
+.ba-blog__title {
+	color: #1d1d1d;
+	margin-top: 10px;
+	@media (min-width:1024px) {
+		margin-top: 20px;
+		transition: color .3s ease-in;
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+.ba-blog__title-large {
+	color: #FFF;
+	margin-bottom: 20px;
+}
+.ba-blog-row-margin {
+	margin-bottom: 80px;
+	@media (min-width:640px) {
+		margin-bottom: 300px;
+	}
+	@media (min-width:1024px) {
+		margin-bottom: 370px;
+	}
+}
+.ba-blog__load-more-wrap {
+	text-align: center;
+	margin-bottom: 100px;
+	margin-left: 50px;
+}
+.ba-blog__load-more {
+	position: relative;
+	text-decoration: none;
+	color: $secondary-color;
+	transition: color .3s ease-in;
+	&:before {
+		position: absolute;
+		content: "";
+		display: block;
+		width: 30px;
+		height: 28px;
+		top: -5px;
+		left: -50px;
+		background: url(../img/load.png) no-repeat;
+	}
+	&:hover {
+		color:darken($secondary-color, 50%);
+	}
+}
